@@ -1,4 +1,5 @@
-const API_BASE = "https://localhost:7241"; 
+const API_BASE = "https://dr69b524xb.execute-api.ap-southeast-1.amazonaws.com/dev"; 
+// const API_BASE = "https://localhost:7241"; 
 
 const form = document.getElementById("shortenForm");
 const longUrlInput = document.getElementById("longUrl");
