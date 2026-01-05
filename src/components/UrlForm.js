@@ -18,10 +18,10 @@ function UrlForm({ onSubmit }) {
         type="url"
         value={longUrl}
         onChange={(e) => setLongUrl(e.target.value)}
-        placeholder="Nhập URL cần rút gọn"
+        placeholder="Enter URL to shorten"
         required
       />
-      <button type="submit">Rút gọn</button>
+      <button type="submit">Shorten</button>
     </form>
   );
 }
