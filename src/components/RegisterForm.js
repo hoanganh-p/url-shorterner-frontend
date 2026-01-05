@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/Auth.css';
 
 const RegisterForm = ({ onRegister, onSwitchToLogin }) => {
   const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ const RegisterForm = ({ onRegister, onSwitchToLogin }) => {
 
   return (
     <div className="auth-container">
-      <h2>Đăng ký</h2>
+      <h2>Register</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Username:</label>
@@ -21,7 +22,7 @@ const RegisterForm = ({ onRegister, onSwitchToLogin }) => {
             value={username} 
             onChange={(e) => setUsername(e.target.value)} 
             required 
-            placeholder="Tên đăng nhập"
+            placeholder="Username"
           />
         </div>
         <div className="form-group">
@@ -31,23 +32,23 @@ const RegisterForm = ({ onRegister, onSwitchToLogin }) => {
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
             required 
-            placeholder="Nhập email đăng ký"
+            placeholder="Enter email"
           />
         </div>
         <div className="form-group">
-          <label>Mật khẩu:</label>
+          <label>Password:</label>
           <input 
             type="password" 
             value={password} 
             onChange={(e) => setPassword(e.target.value)} 
             required 
-            placeholder="Tạo mật khẩu"
+            placeholder="Create password"
           />
         </div>
-        <button type="submit">Đăng ký</button>
+        <button type="submit">Register</button>
       </form>
-      <p style={{marginTop: '10px'}}>
-        Đã có tài khoản? <button type="button" style={{background:'none', border:'none', color:'blue', cursor:'pointer', textDecoration:'underline'}} onClick={onSwitchToLogin}>Đăng nhập</button>
+      <p className="auth-toggle-text">
+        Already have an account? <button type="button" className="auth-toggle-btn" onClick={onSwitchToLogin}>Login</button>
       </p>
     </div>
   );
